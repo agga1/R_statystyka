@@ -37,11 +37,21 @@ E%*%(solve(E))
 #6
 library(MASS)
 data = Cars93
+sapply(data, is.factor)
 Origin <- data['Origin']
 Type <- data['Type']
 table(Type)
 table(Origin)
 
 #7
-mtcars6 = mtcars
+mtcars6 = mtcars[mtcars$cyl==6,]
+print(mtcars6)
+
+#8
+library(MASS)
+dt = Insurance
+x =tapply(dt$Claims, dt$Age, sum)
+print(x)
+y = tapply(dt$Claims, dt$Group, sum)
+print(y)
 
