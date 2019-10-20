@@ -54,4 +54,3 @@ x =tapply(dt$Claims, dt$Age, sum)
 print(x)
 y = tapply(dt$Claims, dt$Group, sum)
 print(y)
-
